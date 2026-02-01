@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_azure_handbook=globalThis.webpackChunkmy_azure_handbook||[]).push([[647],{7121(e,a,r){r.r(a),r.d(a,{default:()=>l});r(6540);var s=r(4164),u=r(7559),o=r(5500),h=r(2831),n=r(1656),c=r(4848);function l(e){return(0,c.jsx)(o.e3,{className:(0,s.A)(u.G.wrapper.docsPages),children:(0,c.jsx)(n.A,{children:(0,h.v)(e.route.routes)})})}}}]);
