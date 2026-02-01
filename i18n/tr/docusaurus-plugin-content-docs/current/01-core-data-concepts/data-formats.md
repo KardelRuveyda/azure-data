@@ -16,6 +16,9 @@ Yapılandırılmış veri, belirli bir **fixed schema** (sabit şema) içine hap
 * **İlişkisel Model:** Genellikle bir veritabanında saklanır ve tablolar birbirini "key" (anahtar) değerler üzerinden selamlar.
 * **Örnek:** Bir Excel sayfası veya SQL tablosu düşünün. Müşteri listesinde "İsim" sütunu her zaman aynı yerdedir ve boş geçilemez.
 
+<img width="820" height="273" alt="image" src="https://github.com/user-attachments/assets/6d8257fe-7d13-48b7-9689-83bb7f572a26" />
+
+
 ### 2. Semi-Structured Data (Yarı Yapılandırılmış Veri): "Esnek Formlar" 📄
 Hayat her zaman tablolara sığmaz. Yarı yapılandırılmış veri, bir yapıya sahiptir ancak her kayıt için esneklik tanır.
 
@@ -23,7 +26,7 @@ Hayat her zaman tablolara sığmaz. Yarı yapılandırılmış veri, bir yapıya
 * **JSON Dünyası:** Bu kategorinin en popüler temsilcisi **JSON** formatıdır. Hiyerarşiktir ve esnektir.
 * **Örnek:** Akıllı telefonunuzdaki rehber. Bazı kişilerde sadece isim varken, bazılarında iş adresi, web sitesi ve doğum günü gibi onlarca ekstra alan bulunur.
 
-
+<img width="580" height="328" alt="image" src="https://github.com/user-attachments/assets/fbec27b3-21cf-4244-99a3-7e6eafec00a5" />
 
 
 ### 3. Unstructured Data (Yapılandırılmamış Veri): "Hafıza Kutusu" 📦
@@ -32,6 +35,8 @@ Dünyadaki verinin büyük çoğunluğu ne bir tabloya ne de bir JSON'a sığar.
 * **Dijital Varlıklar:** Dokümanlar, fotoğraflar, ses kayıtları ve videolar bu gruptadır.
 * **BLOB Kavramı:** Veri profesyonelleri bu tür dosyalara genellikle **BLOB** (Binary Large Objects) derler.
 * **Örnek:** Bir sosyal medya platformundaki video paylaşımları veya sistemlerin ürettiği devasa boyutlardaki binary dosyalar.
+
+<img width="690" height="522" alt="image" src="https://github.com/user-attachments/assets/5c362e64-3a2e-4cb7-9251-2e94874797fe" />
 
 
 Organizasyonlar veriyi bu üç formatta saklayarak, daha sonra analiz ve raporlama yapmak üzere hazır tutarlar. Veri depolama dünyasında karşımıza iki dev çıkar:
