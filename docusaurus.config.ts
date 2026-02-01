@@ -7,11 +7,11 @@ const config: Config = {
   tagline: 'Azure Data World Notes',
   favicon: 'img/favicon.ico',
 
-  url: 'https://github.com/', // Yayına aldığında GitHub Pages linkin gelecek
+  url: 'https://kardelruveyda.github.io', // Yayına aldığında GitHub Pages linkin gelecek
   baseUrl: '/azure-data/', // Repo ismin
-  organizationName: 'kcetin', // GitHub kullanıcı adın
+  organizationName: 'kardelruveyda', // GitHub kullanıcı adın
   projectName: 'azure-data',
-
+  trailingSlash: false,
   onBrokenLinks: 'warn',
 
   // Çoklu dil ayarı
