@@ -10,16 +10,14 @@ In the digital world, data is a large collection of facts like numbers, descript
 The first rule of managing data correctly is to understand its "shape"—its structure. Let’s look at data in three main categories:
 
 
-
-[Image of structured vs semi-structured vs unstructured data]
-
-
 ### 1. Structured Data: "The Organized Library" 📚
 Structured data follows a **fixed schema**. This means every piece of data has a known place and specific properties.
 
 * **Tabular Structure:** The data lives in tables with rows (to represent each record) and columns (to represent attributes).
 * **Relational Model:** Data is usually stored in a database where tables connect to each other using "key" values.
 * **Example:** Think of an Excel sheet or a SQL table. In a customer list, the "Name" column is always in the same place and cannot be empty.
+
+<img width="820" height="273" alt="image" src="https://github.com/user-attachments/assets/6d8257fe-7d13-48b7-9689-83bb7f572a26" />
 
 ---
 
@@ -30,6 +28,8 @@ Life does not always fit into perfect tables. Semi-structured data has some stru
 * **JSON World:** The most popular format for this category is **JSON** (JavaScript Object Notation). It is hierarchical and very flexible.
 * **Example:** The contact list on your smartphone. Some contacts only have a name, while others include work addresses, websites, and birthdays.
 
+<img width="580" height="328" alt="image" src="https://github.com/user-attachments/assets/fbec27b3-21cf-4244-99a3-7e6eafec00a5" />
+
 ---
 
 ### 3. Unstructured Data: "The Memory Box" 📦
@@ -38,6 +38,9 @@ Most data in the world does not fit into a table or a JSON file. We call data wi
 * **Digital Assets:** Documents, photos, audio, and video files are in this group.
 * **BLOB Concept:** Data professionals usually call these files **BLOBs** (Binary Large Objects).
 * **Example:** Video posts on social media or very large binary files created by systems.
+
+<img width="690" height="522" alt="image" src="https://github.com/user-attachments/assets/5c362e64-3a2e-4cb7-9251-2e94874797fe" />
+
 
 ---
 
