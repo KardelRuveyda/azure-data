@@ -54,7 +54,7 @@ i18n: {
           position: 'right',
         },
         {
-          href: 'https://github.com/kcetin/azure-data',
+          href: 'https://github.com/KardelRuveyda/azure-data',
           label: 'GitHub',
           position: 'right',
         },
