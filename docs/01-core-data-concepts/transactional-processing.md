@@ -1,50 +1,46 @@
 ---
-title: İşlemsel Veri İşleme (OLTP)
+title: Transactional Data Processing (OLTP)
 sidebar_position: 3
 ---
 
-# Online Transactional Processing (OLTP): İşin Kalbi ⚡
+# Online Transactional Processing (OLTP): The Heart of Business ⚡
 
-Bir banka ATM'sinden para çektiğinizi veya marketten sevdiğiniz bir atıştırmalığı aldığınızı düşünün. O anda arka planda gerçekleşen şey bir **Transaction** (işlem), yani küçük ve bağımsız bir iş birimidir. 
+Imagine withdrawing money from an ATM or buying your favorite snack at a market. At that moment, a **Transaction** is happening in the background. A transaction is a small and independent unit of work.
 
-İşlemsel veri işleme sistemleri (OLTP), bu anlık olayları kaydetmek ve yönetmek için tasarlanmıştır. Bu sistemlerin en büyük meydan okuması **hız** ve **doğruluktur**. Günde milyonlarca işlemin yapıldığı bir dünyada, veriye anlık erişim sağlamak ve bu veriyi güvenle saklamak bir mimarın birincil görevidir.
-
----
-
-## 🛡️ Veri Mimarisinin Kutsal Kuralları: ACID Prensipleri
-
-OLTP sistemlerinin "şakası yoktur". Bir işlemin yarım kalması veya yanlış kaydedilmesi, finansal kayıplara veya güven kaybına yol açar. Bu yüzden, işlemsel sistemler **ACID** adı verilen dört temel prensibe sıkı sıkıya bağlıdır:
-
-
-
-### 1. Atomicity (Bütünlük / Atomiklik) - "Ya Hep Ya Hiç"
-İşlem bir bütündür; ya tamamen başarılı olur ya da tamamen başarısız sayılır. 
-* **Örnek:** A hesabından B hesabına para gönderirken; para A'dan düşüp B'ye eklenemezse, tüm işlem iptal edilir (Fail). Para havada kalmaz.
-
-### 2. Consistency (Tutarlılık) - "Kurallara Uygun Geçiş"
-İşlemler veriyi her zaman bir geçerli durumdan diğerine taşır. Veritabanındaki tüm kurallar (kısıtlamalar, triggerlar) işlem bittiğinde hala geçerli olmalıdır.
-* **Örnek:** İşlem bittiğinde, her iki hesabın bakiyesi de yapılan transferi doğru şekilde yansıtmalıdır.
-
-### 3. Isolation (İzolasyon) - "Sıranı Bekle"
-Aynı anda yapılan işlemler birbirini etkilemez. Sanki sistemde o an sadece tek bir işlem yapılıyormuş gibi davranılır.
-* **Örnek:** Siz para transferi yaparken bir başkası bakiyenizi kontrol ediyorsa, transferin "yarım kalmış" halini (para A'dan düştü ama B'ye henüz geçmedi halini) asla göremez.
-
-### 4. Durability (Dayanıklılık) - "Kaydettiysen Unutma"
-İşlem tamamlandığında (committed), sistem kapansa veya elektrikler kesilse bile veri kalıcı olarak saklanır.
-* **Örnek:** Banka transfer onayını ekranda gördüğünüz an, o veri artık sistemin fiziksel hafızasındadır; veritabanı kapansa bile açıldığında o transferi hatırlar.
+Transactional data processing systems (OLTP) are designed to record and manage these instant events. The biggest challenge for these systems is **speed** and **accuracy**. In a world where millions of transactions happen every day, providing instant access to data and storing it safely is the primary job of an architect.
 
 ---
 
-## 🏗️ Mimari Bakış: LOB Uygulamaları
+## 🛡️ The Holy Rules of Data Architecture: ACID Principles
 
-OLTP çözümleri genellikle **Line of Business (LOB)** uygulamalarını desteklemek için kullanılır. Bu sistemler optimize edilirken tek bir şeye odaklanılır: **Yüksek Erişilebilirlik ve Hızlı Yanıt Süresi**.
+There is no room for mistakes in OLTP systems. If a transaction fails or is recorded incorrectly, it leads to financial loss or loss of trust. Because of this, transactional systems strictly follow four basic principles called **ACID**:
 
+### 1. Atomicity - "All or Nothing"
+A transaction is treated as a single unit; it either succeeds completely or fails completely.
+* **Example:** When sending money from Account A to Account B, if the money is taken from A but cannot be added to B, the entire transaction is cancelled (Fail). The money does not get lost in between.
 
+### 2. Consistency - "Move to a Valid State"
+Transactions can only take the data from one valid state to another. All database rules must still be valid after the transaction is finished.
+* **Example:** When the transaction is done, the balances of both accounts must correctly reflect the transfer.
 
-OLTP tasarlarken şu **CRUD** operasyonlarına odaklanırız:
-* **C**reate (Oluşturma)
-* **R**ead (Okuma)
-* **U**pdate (Güncelleme)
-* **D**elete (Silme)
+### 3. Isolation - "Wait Your Turn"
+Concurrent transactions (transactions happening at the same time) cannot interfere with each other. The system acts as if only one transaction is happening at a time.
+* **Example:** While you are transferring money, if someone else checks your balance, they can never see the "half-finished" state of the transfer.
 
-> **💡 Önemli Not:** Sınavlarda veya gerçek hayat senaryolarında karşınıza çıkacak en büyük tuzak, OLTP'yi "büyük veri depolama kapasitesi" ile karıştırmaktır. OLTP devasa veri saklamaktan ziyade, **anlık işlemleri en hızlı ve en tutarlı** şekilde yapmak için optimize edilir.
+### 4. Durability - "Once Saved, Never Forgotten"
+When a transaction is finished (committed), it remains saved even if the system turns off or the power fails.
+* **Example:** The moment you see the "Transfer Successful" message on the screen, that data is in the physical memory. Even if the database closes, it will remember the transfer when it opens again.
+
+---
+
+## 🏗️ Architectural View: LOB Applications
+
+OLTP solutions are usually used to support **Line of Business (LOB)** applications. When we optimize these systems, we focus on one thing: **High Availability and Fast Response Times**.
+
+When designing OLTP, we focus on these **CRUD** operations:
+* **C**reate
+* **R**ead
+* **U**pdate
+* **D**elete
+
+> **💡 Important Note:** The biggest trap in exams or real-life scenarios is confusing OLTP with "large data storage capacity". OLTP is not about storing massive amounts of data; it is optimized for making **instant transactions as fast and consistent** as possible.

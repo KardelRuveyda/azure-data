@@ -1,8 +1,8 @@
 {
-  "label": "Bölüm 1: Temel Veri Kavramları",
+  "label": "Chapter 1: Core Data Concepts",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Veri formatları, depolama seçenekleri ve işleme modellerine derinlemesine bakış."
+    "description": "A deep dive into data formats, storage options, and processing models."
   }
 }

@@ -1,39 +1,47 @@
 ---
-title: Veri Biçimlerini Tanımlama
+title: Identifying Data Formats
 sidebar_position: 1
 ---
 
-# Veri Biçimlerini Tanımlama 🧬
+# Identifying Data Formats 🧬
 
-Dijital dünyada veri; sayılardan, gözlemlerden ve olguların koleksiyonundan oluşan devasa bir gerçeklik kütlesidir. Ancak ham veri, işlenmediği sürece sadece bir gürültüdür. Bir mimar olarak bizim görevimiz, bu gürültüyü organizasyon için değerli olan **entity**'lere (varlıklar - örneğin bir müşteri veya ürün) ve onları tanımlayan **attribute**'lara (özellikler - isim, adres, fiyat) dönüştürmektir.
+In the digital world, data is a large collection of facts like numbers, descriptions, and observations used to record information. However, raw data is just noise until we process it. As an architect, our job is to turn this noise into **entities** (like a customer or a product) and **attributes** (like a name, address, or price) that are valuable for the organization.
 
-Veriyi doğru yönetmenin ilk kuralı, onun "şeklini" yani yapısını anlamaktır. Gelin veriyi üç ana karakter altında inceleyelim:
-
-### 1. Structured Data (Yapılandırılmış Veri): "Düzenli Kütüphane" 📚
-Yapılandırılmış veri, belirli bir **fixed schema** (sabit şema) içine hapsolmuş veridir. Yani her bir veri parçasının nerede duracağı ve hangi özelliğe sahip olacağı önceden bellidir.
-
-* **Tablo Yapısı:** Veri, satırlar (her bir kayıt) ve sütunlardan (özellikler) oluşan bir tabloda yaşar.
-* **İlişkisel Model:** Genellikle bir veritabanında saklanır ve tablolar birbirini "key" (anahtar) değerler üzerinden selamlar.
-* **Örnek:** Bir Excel sayfası veya SQL tablosu düşünün. Müşteri listesinde "İsim" sütunu her zaman aynı yerdedir ve boş geçilemez.
-
-### 2. Semi-Structured Data (Yarı Yapılandırılmış Veri): "Esnek Formlar" 📄
-Hayat her zaman tablolara sığmaz. Yarı yapılandırılmış veri, bir yapıya sahiptir ancak her kayıt için esneklik tanır.
-
-* **Varyasyon Şansı:** Bir müşterinin iki e-posta adresi varken, diğerinin hiç olmayabilir. Bu veri tipi, bu farklılıklara kızmaz, onları kucaklar.
-* **JSON Dünyası:** Bu kategorinin en popüler temsilcisi **JSON** formatıdır. Hiyerarşiktir ve esnektir.
-* **Örnek:** Akıllı telefonunuzdaki rehber. Bazı kişilerde sadece isim varken, bazılarında iş adresi, web sitesi ve doğum günü gibi onlarca ekstra alan bulunur.
+The first rule of managing data correctly is to understand its "shape"—its structure. Let’s look at data in three main categories:
 
 
 
-
-### 3. Unstructured Data (Yapılandırılmamış Veri): "Hafıza Kutusu" 📦
-Dünyadaki verinin büyük çoğunluğu ne bir tabloya ne de bir JSON'a sığar. Hiçbir belirli şeması veya düzeni olmayan bu yığına yapılandırılmamış veri diyoruz.
-
-* **Dijital Varlıklar:** Dokümanlar, fotoğraflar, ses kayıtları ve videolar bu gruptadır.
-* **BLOB Kavramı:** Veri profesyonelleri bu tür dosyalara genellikle **BLOB** (Binary Large Objects) derler.
-* **Örnek:** Bir sosyal medya platformundaki video paylaşımları veya sistemlerin ürettiği devasa boyutlardaki binary dosyalar.
+[Image of structured vs semi-structured vs unstructured data]
 
 
-Organizasyonlar veriyi bu üç formatta saklayarak, daha sonra analiz ve raporlama yapmak üzere hazır tutarlar. Veri depolama dünyasında karşımıza iki dev çıkar:
-1. **File Stores (Dosya Depoları):** Verinin dosya bazlı (CSV, JSON, Parquet) saklandığı yerler.
-2. **Databases (Veritabanları):** Veri kayıtlarını yönetmek için özelleşmiş sistemler.
+### 1. Structured Data: "The Organized Library" 📚
+Structured data follows a **fixed schema**. This means every piece of data has a known place and specific properties.
+
+* **Tabular Structure:** The data lives in tables with rows (to represent each record) and columns (to represent attributes).
+* **Relational Model:** Data is usually stored in a database where tables connect to each other using "key" values.
+* **Example:** Think of an Excel sheet or a SQL table. In a customer list, the "Name" column is always in the same place and cannot be empty.
+
+---
+
+### 2. Semi-Structured Data: "Flexible Forms" 📄
+Life does not always fit into perfect tables. Semi-structured data has some structure, but it allows for changes between different records.
+
+* **Variation:** One customer might have two email addresses, while another has none. This data type is flexible and accepts these differences.
+* **JSON World:** The most popular format for this category is **JSON** (JavaScript Object Notation). It is hierarchical and very flexible.
+* **Example:** The contact list on your smartphone. Some contacts only have a name, while others include work addresses, websites, and birthdays.
+
+---
+
+### 3. Unstructured Data: "The Memory Box" 📦
+Most data in the world does not fit into a table or a JSON file. We call data with no specific schema or organized order "unstructured data".
+
+* **Digital Assets:** Documents, photos, audio, and video files are in this group.
+* **BLOB Concept:** Data professionals usually call these files **BLOBs** (Binary Large Objects).
+* **Example:** Video posts on social media or very large binary files created by systems.
+
+---
+
+### Summary: Data Stores
+Organizations store data in these three formats to analyze them later. In the world of data storage, there are two main types:
+1.  **File Stores:** Locations where data is stored as files (like CSV, JSON, or Parquet).
+2.  **Databases:** Specialized systems used to manage and query data records.

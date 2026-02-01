@@ -1,32 +1,32 @@
 ---
 slug: /
 sidebar_position: 1
-title: Başlarken
+title: Introduction
 ---
 
 # Azure Data Handbook 📘
 
-Bu dijital alan, Azure veri dünyasındaki öğrenme yolculuğumun ve teknik birikimimin ana merkezidir. 
+This digital space is the central hub for my learning journey and technical expertise in the Azure data world.
 
-Bir **Digital Cloud Solution Architect** olarak, Azure ekosisteminde verinin nasıl işlendiğini, saklandığını ve yönetildiğini keşfederken öğrendiğim her şeyi burada bir araya getiriyorum. Burası benim için sadece bir dökümantasyon değil; karşılaştığım mimari zorlukları, çözüm yollarını ve teknik detayları kristalleştirdiğim bir "yaşayan not defteri".
-
----
-
-## 🚀 Burası Benim Öğrenme Alanım
-
-Bu handbook'u oluştururken temel motivasyonum, karmaşık görünen Azure veri servislerini daha anlaşılır ve uygulanabilir kılmak. Azure-Data ekosistemiyle ilgili çalıştığım, deneyimlediğim ve öğrendiğim ne varsa; çekirdek konseptlerden en karmaşık bulut mimarilerine kadar her şeyi burada adım adım paylaşıyorum.
+As a **Digital Cloud Solution Architect**, I bring together everything I learn while exploring how data is processed, stored, and managed in the Azure ecosystem. For me, this is not just documentation; it is a "living notebook" where I crystallize architectural challenges, solutions, and technical details.
 
 ---
 
-## 🛠️ Nasıl Kullanılır?
+## 🚀 This is My Learning Space
 
-Notlarımı, bir mimarın bakış açısıyla pratik ve stratejik olacak şekilde düzenledim:
+My main motivation for creating this handbook is to make complex Azure data services more understandable and applicable. I share everything I have worked on, experienced, and learned about the Azure-Data ecosystem—from core concepts to the most complex cloud architectures—step by step.
 
-* **Sistematik İlerleme:** Sol taraftaki menü üzerinden temel kavramlardan başlayarak derin teknik konulara doğru yol alabilirsiniz.
-* **Hızlı Erişim:** Aradığınız spesifik bir konu veya servis olduğunda yukarıdaki arama çubuğu en iyi dostunuz olacak.
-* **İki Dilli Yapı:** Notlarımın bir kısmını küresel standartlara uygun şekilde İngilizce olarak da kurguluyorum; dil geçişini sağ üstten yapabilirsiniz.
+---
 
-Buradaki notlar, ben öğrendikçe ve yeni projeler deneyimledikçe güncellenmeye ve büyümeye devam edecek. Hadi, Azure'un veri okyanusuna dalalım!
+## 🛠️ How to Use It?
+
+I have organized my notes to be practical and strategic from an architect's perspective:
+
+* **Systematic Progress:** You can start from basic concepts and move toward deep technical topics using the menu on the left.
+* **Quick Access:** The search bar at the top will be your best friend when you are looking for a specific topic or service.
+* **Bilingual Structure:** I also design some of my notes in English to meet global standards; you can change the language at the top right.
+
+These notes will continue to update and grow as I learn and experience new projects. Let's dive into the Azure data ocean!
 
 ---
 *Kardel Ruveyda Cetin - 2026*

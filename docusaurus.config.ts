@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Azure Data Handbook', // Kitap ismi
-  tagline: 'Azure Veri Dünyası Notları',
+  tagline: 'Azure Data World Notes',
   favicon: 'img/favicon.ico',
 
   url: 'https://github.com/', // Yayına aldığında GitHub Pages linkin gelecek
@@ -15,15 +15,14 @@ const config: Config = {
   onBrokenLinks: 'warn',
 
   // Çoklu dil ayarı
-  i18n: {
-    defaultLocale: 'tr', // Varsayılan dil Türkçe
-    locales: ['tr', 'en'], // Desteklenen diller
-    localeConfigs: {
-      tr: { label: 'Türkçe' },
-      en: { label: 'English' },
-    },
+i18n: {
+  defaultLocale: 'en',
+  locales: ['en', 'tr'], // Burada 'tr' mutlaka olmalı!
+  localeConfigs: {
+    en: { label: 'English' },
+    tr: { label: 'Turkish' },
   },
-
+},
   presets: [
     [
       'classic',
@@ -48,7 +47,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Notlar',
+          label: 'Notes',
         },
         {
           type: 'localeDropdown', // Sağ üstte dil değiştirme butonu

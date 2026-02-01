@@ -1,49 +1,45 @@
 ---
-title: Analitik Veri İşleme (OLAP)
+title: Analytical Data Processing (OLAP)
 sidebar_position: 4
 ---
 
-# Online Analytical Processing (OLAP): Büyük Resmin Peşinde 📊
+# Online Analytical Processing (OLAP): Chasing the Big Picture 📊
 
-İşlemsel sistemlerde (OLTP) her bir kalp atışını (siparişler, ödemeler) kaydettik. Peki, "Geçen yılın aynı dönemine göre satışlarımız neden düştü?" veya "En kârlı müşteri segmentimiz hangisi?" gibi soruların cevabını nerede bulacağız? 
+In transactional systems (OLTP), we recorded every heartbeat—like orders and payments. But where do we find the answers to questions like, "Why did our sales drop compared to the same time last year?" or "Which customer segment is the most profitable?"
 
-İşte burada devreye **OLAP** giriyor. Analitik sistemler, genellikle salt-okunur (read-only) yapılardır ve devasa hacimlerdeki geçmiş verileri veya iş metriklerini analiz etmek için optimize edilmişlerdir. Bir mimar için OLAP, veriyi sadece saklamak değil, onu bir "karar destek mekanizmasına" dönüştürmektir.
-
----
-
-## 🏛️ Analitik Mimari: Verinin Yolculuğu
-
-Kurumsal ölçekte bir analitik sistem, verinin ham halden rafine edilmiş bir rapor haline gelmesine kadar dört ana katmandan oluşur:
-
-
-
-### 1. Data Lake (Veri Gölü): "Ham Veri Ambarı" 🌊
-Operasyonel sistemlerden gelen verilerin (ETL süreçleriyle) hiçbir yapısal kısıtlama olmaksızın toplandığı, dosya tabanlı devasa depolama alanlarıdır. 
-* **Kimler kullanır?** Genellikle **Data Scientist**'ler, ham dosyaları keşfetmek ve modeller oluşturmak için doğrudan veri gölünde çalışırlar.
-
-### 2. Data Warehouse (Veri Ambarı): "Düzenli Showroom" 🏛️
-Analiz ve raporlama için optimize edilmiş, ilişkisel bir şemaya sahip yapılardır. Veri buraya gelmeden önce temizlenir ve yapılandırılır.
-* **Kimler kullanır?** **Data Analyst**'ler, karmaşık raporlar ve görselleştirmeler üretmek için doğrudan buradaki tabloları sorgularlar.
-
-### 3. Data Lakehouse: "Modern Hibrit" 🏠
-Veri gölünün (Lake) esnek ve ölçeklenebilir depolama gücüyle, veri ambarının (Warehouse) ilişkisel sorgulama yeteneklerini birleştiren modern bir inovasyondur.
-
-### 4. OLAP Model (Küp): "Çok Boyutlu Bakış" 🧊
-Verilerin **Dimensions** (Boyutlar - tarih, şehir, ürün) üzerinden **Measures** (Ölçümler - satış tutarı, miktar) ile önceden hesaplandığı yapılardır.
-* **Drill up/down:** Bu model sayesinde "ülke" bazlı satışlardan tek bir "mağaza" bazlı satışa kadar detaya inebilir veya tam tersi yönde genel toplamlara çıkabilirsiniz.
-
-
+This is where **OLAP** comes in. Analytical systems are usually read-only (or read-mostly) systems optimized for analyzing huge amounts of historical data or business metrics. For an architect, OLAP is not just about storing data; it is about turning that data into a "decision support mechanism."
 
 ---
 
-## 👥 Ekosistemde Kim, Nerede Çalışır?
+## 🏛️ Analytical Architecture: The Journey of Data
 
-Her kullanıcının veriyle olan etkileşimi farklıdır ve bu mimari herkese ihtiyacı olan alanı sağlar:
+At an enterprise scale, an analytical system has four main layers to turn raw data into a refined report:
 
-* **Data Scientist:** Ham dosyalara ve veri gölüne (Data Lake) odaklanır.
-* **Data Analyst:** Yapılandırılmış tablolara ve veri ambarına (Data Warehouse) odaklanır.
-* **Business User (Yönetici/Karar Verici):** Önceden hazırlanmış raporlara, dashboardlara ve analitik modellere (Küp) odaklanır.
+### 1. Data Lake: "The Raw Data Store" 🌊
+This is a large, file-based storage area where data from operational systems is collected without structural limits (using ETL processes).
+* **Who uses it?** Usually **Data Scientists**. They work directly in the data lake to explore raw files and build models.
+
+### 2. Data Warehouse: "The Organized Showroom" 🏛️
+These are relational structures optimized for analysis and reporting. Data is cleaned and organized before it enters the warehouse.
+* **Who uses it?** **Data Analysts**. They query tables here to create complex reports and visualizations.
+
+### 3. Data Lakehouse: "The Modern Hybrid" 🏠
+This is a modern innovation that combines the flexible and scalable storage of a Data Lake with the relational query power of a Data Warehouse.
+
+### 4. OLAP Model (Cube): "The Multi-dimensional View" 🧊
+In this model, numeric values (**Measures** - like sales amount or quantity) are pre-calculated for different categories (**Dimensions** - like date, city, or product).
+* **Drill up/down:** This model allows you to see the big picture (like total sales by country) or go deep into the details (like sales for a single store).
 
 ---
 
-> **💡 Önemli Not:** Analitik işleme sistemleri, "Neler oldu?" sorusuna yanıt vermek için geçmişin fotoğrafını çeker. Veri burada denormalize edilerek (tekrar eden veriler eklenerek) sorguların çok daha hızlı çalışması sağlanır.
+## 👥 Who Works Where in the Ecosystem?
+
+Different users interact with data in different ways, and this architecture provides a space for everyone:
+
+* **Data Scientist:** Focuses on raw files and the **Data Lake**.
+* **Data Analyst:** Focuses on structured tables and the **Data Warehouse**.
+* **Business User (Manager/Decision Maker):** Focuses on pre-prepared reports, dashboards, and **OLAP Models (Cubes)**.
+
+---
+
+> **💡 Important Note:** Analytical systems take a "photo of the past" to answer the question, "What happened?" In these systems, data is often **denormalized** (adding some duplicate data) to make queries run much faster.
